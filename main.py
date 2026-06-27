@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 API_KEY = os.getenv("API_KEY")
 
 if not API_KEY:
-    raise ValueError("API_KEY secret bulunamadı. GitHub Secrets içinde API_KEY tanımlı olmalı.")
+    raise ValueError("API_KEY secret bulunamadı. GitHub Secrets içinde API_KEY tanımlanmış olmalı.")
 
 cities = ["Istanbul", "Ankara", "Izmir", "Berlin", "London"]
 
