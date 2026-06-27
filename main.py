@@ -22,6 +22,7 @@ rows = []
 
 for c in cities:
     data = extract(c)
+    print(c,data)
 
     if "main" in data:
         rows.append(transform(data))
