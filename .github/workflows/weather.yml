@@ -1,5 +1,7 @@
 name: Weather ETL Pipeline
 
+permissions:
+  contents: write
 on:
   push:
     branches:
@@ -30,3 +32,11 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
           python main.py
+          
+      - name: Commit results
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add weather.csv
+          git commit -m "update weather data" || echo "no changes"
+          git push
