@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import os
 
-API_KEY = os.getenv("8c42d73b9b4c1c4b557d25bf427495ec")
+API_KEY = os.getenv("API_KEY")
 
 cities = ["Istanbul", "Ankara", "Izmir", "Berlin", "London"]
 
